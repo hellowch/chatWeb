@@ -2,14 +2,17 @@ package com.chatweb.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
+/**
+ * 开启WebSocket支持 配置websocket并开启
+ */
 @Configuration
 public class WebSocketConfig {
-
-    //注入ServerEndpointExporter bean对象，自动注册使用了@ServerEndpoint注解
     @Bean
-    public ServerEndpointExporter serverEndpointExporter(){
+    public ServerEndpointExporter serverEndpointExporter() {
         return new ServerEndpointExporter();
     }
 }
+
